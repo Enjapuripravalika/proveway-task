@@ -6,16 +6,296 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proveway - Add to cart</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utility.css">
     <script src="js/index.js"></script>
 </head>
 
-<body class="m-0">
-    <div class="container">
-        <div>
-            <h1>Product added to cart successfully</h1>
-            <a href="">Go back to home</a>
+<body>
+    <div class="container d-flex align-items-center justify-content-center">
+        <div class="center-div d-flex flex-column align-items-center justify-content-center">
+            <h1 class="header fs-20 fw-600">YAY! It's BOGO </h1>
+
+            <div class="card" onclick="cardClicked('product1')">
+                <div class="d-flex align-items-center">
+                    <div class="w-10">
+                        <input type="radio" id="product1" name="product1" class="product-radio-input">
+                        <label for="product1" class="product-radio-label">
+                            <span class="product-radio-button"></span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-column w-60">
+                        <div class="d-flex">
+                            <p class="fw-600 fs-20 no-of-unit">1 Unit</p>
+                            <div class="fs-14 fw-400 d-flex align-items-center justify-content-center off-percent">
+                                <p>10% Off</p>
+                            </div>
+                        </div>
+                        <div class="unit-name">
+                            <p class="fs-14">DKK 195.00</p>
+                        </div>
+                    </div>
+                    <div class="w-30">
+                        <p class="fw-500 fs-20">$10.00 USD</p>
+                        <p class="fs-14 original-price">$24.00
+                            USD</p>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <div class="grid-container">
+                        <div></div>
+                        <div>Size</div>
+                        <div>Color</div>
+                        <div class="d-flex hash-number">#1</div>
+                        <div>
+                            <div class="size-select">
+                                <select name="size" id="size">
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M" selected>M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="color-select">
+                                <select name="color" id="color">
+                                    <option value="Black">Black</option>
+                                    <option value="White">White</option>
+                                    <option value="Blue">Blue</option>
+                                    <option value="Yellow" selected>Yellow</option>
+                                    <option value="Green">Green</option>
+                                    <option value="Orange">Orange</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                        <div class="d-flex hash-number">#2</div>
+                        <div>
+                            <div class="size-select">
+                                <select name="size" id="size">
+                                    <option value="XS">XS</option>
+                                    <option value="S" selected>S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="color-select">
+                                <select name="color" id="color">
+                                    <option value="Black" selected>Black</option>
+                                    <option value="White">White</option>
+                                    <option value="Blue">Blue</option>
+                                    <option value="Yellow">Yellow</option>
+                                    <option value="Green">Green</option>
+                                    <option value="Orange">Orange</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-24 p-relative" onclick="cardClicked('product2')">
+                <div class="popular-ribbon">
+                    <p class="fs-14 fw-500 most-popular-text">
+                        MOST POPULAR</p>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="w-10">
+                        <input type="radio" id="product2" name="product2" class="product-radio-input">
+                        <label for="product2" class="product-radio-label">
+                            <span class="product-radio-button"></span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-column w-60">
+                        <div class="d-flex">
+                            <p class="fw-600 fs-20 no-of-unit">2 Unit</p>
+                            <div class="fs-14 fw-400 d-flex align-items-center justify-content-center off-percent">
+                                <p>20% Off</p>
+                            </div>
+                        </div>
+                        <div class="unit-name">
+                            <p class="fs-14">DKK 345.00</p>
+                        </div>
+                    </div>
+                    <div class="w-30">
+                        <p class="fw-500 fs-20">$18.00 USD</p>
+                        <p class="fs-14 original-price">$24.00
+                            USD</p>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <div class="grid-container">
+                        <div></div>
+                        <div>Size</div>
+                        <div>Color</div>
+                        <div class="grid-item d-flex hash-number">#1</div>
+                        <div>
+                            <div class="size-select">
+                                <select name="size" id="size">
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L" selected>L</option>
+                                    <option value="XL">XL</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="color-select">
+                                <select name="color" id="color">
+                                    <option value="Black">Black</option>
+                                    <option value="White">White</option>
+                                    <option value="Blue" selected>Blue</option>
+                                    <option value="Yellow">Yellow</option>
+                                    <option value="Green">Green</option>
+                                    <option value="Orange">Orange</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                        <div class="grid-item d-flex hash-number">#2</div>
+                        <div>
+                            <div class="size-select">
+                                <select name="size" id="size">
+                                    <option value="XS">XS</option>
+                                    <option value="S" selected>S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="color-select">
+                                <select name="color" id="color">
+                                    <option value="Black">Black</option>
+                                    <option value="White" selected>White</option>
+                                    <option value="Blue">Blue</option>
+                                    <option value="Yellow">Yellow</option>
+                                    <option value="Green">Green</option>
+                                    <option value="Orange">Orange</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-24" onclick="cardClicked('product3')">
+                <div class="d-flex align-items-center">
+                    <div class="w-10">
+                        <input type="radio" id="product3" name="product3" class="product-radio-input">
+                        <label for="product3" class="product-radio-label">
+                            <span class="product-radio-button"></span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-column w-60">
+                        <div class="d-flex">
+                            <p class="fw-600 fs-20 no-of-unit">3 Unit</p>
+                            <div class="fs-14 fw-400 d-flex align-items-center justify-content-center off-percent">
+                                <p>30% Off</p>
+                            </div>
+                        </div>
+                        <div class="unit-name">
+                            <p class="fs-14">DKK 485.00</p>
+                        </div>
+                    </div>
+                    <div class="w-30">
+                        <p class="fw-500 fs-20">$20.00 USD</p>
+                        <p class="fs-14 original-price">$24.00
+                            USD</p>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <div class="grid-container">
+                        <div></div>
+                        <div>Size</div>
+                        <div>Color</div>
+                        <div class="grid-item d-flex hash-number">#1</div>
+                        <div>
+                            <div class="size-select">
+                                <select name="size" id="size">
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL" selected>XL</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="color-select">
+                                <select name="color" id="color">
+                                    <option value="Black">Black</option>
+                                    <option value="White">White</option>
+                                    <option value="Blue">Blue</option>
+                                    <option value="Yellow">Yellow</option>
+                                    <option value="Green" selected>Green</option>
+                                    <option value="Orange">Orange</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                        <div class="grid-item d-flex hash-number">#2</div>
+                        <div>
+                            <div class="size-select">
+                                <select name="size" id="size">
+                                    <option value="XS" selected>XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="color-select">
+                                <select name="color" id="color">
+                                    <option value="Black">Black</option>
+                                    <option value="White">White</option>
+                                    <option value="Blue">Blue</option>
+                                    <option value="Yellow">Yellow</option>
+                                    <option value="Green">Green</option>
+                                    <option value="Orange" selected>Orange</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between mt-12 w-100">
+                <p class="fs-16 fw-500 primary-color">Free Delivery</p>
+                <p class="fs-16 fw-500">Total : <span class="fw-600">$18.00 USD</span></p>
+            </div>
+
+            <div class="w-100 mt-18">
+                <button type="button" class="d-flex align-items-center justify-content-center add-to-cart-btn">
+                    <span class="fs-24 mr-4">+</span>
+                    <span class="fs-14">Add to Cart</span>
+                </button>
+            </div>
+
+            <div class="d-flex align-items-center powered-by-div">
+                <i class="fs-12 grey-color">@Powered by Pumper</i>
+            </div>
+
         </div>
     </div>
+
 </body>
 
 </html>
