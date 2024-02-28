@@ -1,11 +1,230 @@
-/* Utility classes */
-.m-0{
-    margin: 0;
+/* Define CSS variables */
+:root {
+    --primary-color: #FF6B82; /* Blue */
+    --secondary-color: #fff7f8; /* Yellow */
+    --grey-color: #C8C8C8; /* Grey */
+    --white-color: #fff; /* White */
+    --charcoal-color: #333; /* Charcoal */
+    --border-color: #ffd1d8;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    font-family: "inter", sans-serif;
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.grey-color {
+    color: var(--grey-color);
+}
+  
 .container{
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.center-div{
+    width: 440px;
+    height: 80vh;
+}
+
+.header {
+    position: relative;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.header::before,
+.header::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 140px;
+    height: 0.9px;
+    background-color: var(--grey-color);
+}
+
+.header::before {
+    left: -150px;
+}
+
+.header::after {
+    right: -150px;
+}
+
+.card {
+    border: 1px solid var(--grey-color);
+    padding: 20px;
+    width: 400px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.card-selected {
+    border: 1.5px solid var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.product-radio-input{
+    display: none;
+}
+
+.product-radio-button {
+    height: 16px;
+    width: 16px;
+    border: 1px solid var(--grey-color);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.product-radio-button::after {
+    content: "";
+    display: block;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transition: opacity 0.1s;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary-color);
+    opacity: 0;
+}
+
+.product-radio-input:checked + .product-radio-label .product-radio-button:after {
+    opacity: 1;
+}
+
+.product-radio-input:checked + .product-radio-label .product-radio-button {
+    border-color: var(--primary-color);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 15px 80px 80px;
+    grid-template-rows: 20px 35px 35px;
+    row-gap: 8px;
+    column-gap: 16px;
+}
+
+.size-select, .color-select {
+    position: relative;
+    display: inline-block;
+}
+  
+.size-select select{
+    padding: 8px 60px 8px 8px;
+    font-size: 14px;
+    border: 1.5px solid var(--grey-color);
+    border-radius: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: var(--white-color);
+}
+
+.color-select select{
+    padding: 8px 40px 8px 8px;
+    font-size: 14px;
+    border: 1.5px solid var(--grey-color);
+    border-radius: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: var(--white-color);
+}
+
+.size-select select:focus, .color-select select:focus{
+    outline: none;
+    border-color: var(--border-color);
+}
+
+.select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid var(--charcoal-color);
+}
+
+.popular-ribbon {
+    width: 140px;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 8px solid var(--primary-color);
+    position: absolute;
+    top: -8px;
+    right: 0px;
+    text-align: center;
+}
+
+.most-popular-text{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.no-of-unit{
+    margin-right: 8px;
+    align-self: flex-end;
+}
+
+.off-percent{
+    background-color: var(--primary-color);
+    padding: 4px;
+    width: 53px;
+    height: 15px;
+    color: var(--white-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 1px;
+}
+
+.unit-name{
+    margin-top: 4px;
+}
+
+.original-price{
+    text-decoration: line-through;
+    color: var(--grey-color);
+    margin-top: 2px;
+}
+
+.accordion-content {
+    margin-top: 16px;
+    margin-left: 8px;
+}
+
+.hash-number {
+    align-self: center;
+}
+
+.add-to-cart-btn{
+    padding: 10px;
+    background-color: var(--primary-color);
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    border-radius: 4px;
+    color: var(--white-color);
+}
+
+.powered-by-div{
+    width: 100%;
+    margin-top: 5px;
+    justify-content: end;
 }
