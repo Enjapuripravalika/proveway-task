@@ -31,11 +31,17 @@ function cardClicked(productId) {
 }
 
 //Onload, click the second card
+// document.addEventListener('DOMContentLoaded', function() {
+//     var cards = document.querySelectorAll('.card');
+//     cards.forEach(function(card, index) {
+//         if (index === 1) {
+//             card.click();
+//         }
+//     });
+// });
+
+// Easy way of DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function() {
-    var cards = document.querySelectorAll('.card');
-    cards.forEach(function(card, index) {
-        if (index === 1) {
-            card.click();
-        }
-    });
+ var mostpopularcard = document.getElementById('card2'); 
+   mostpopularcard.click();
 });
